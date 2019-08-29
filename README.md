@@ -54,8 +54,8 @@ eval(parse(text = getURL("https://github.com/ipb-halle/MetFamily/blob/master/R/D
 
 Source the classifier source files.
 ```
-source("/mnt/ifs/data/IPB/Projects/2017_005_MS-databases/mFam contributions/mFam Aggregation/Classifier_mFam/SubstanceClassClassifier.R")
-source("/mnt/ifs/data/IPB/Projects/2017_005_MS-databases/mFam contributions/mFam Aggregation/Classifier_mFam/SubstanceClassClassifier_classifier.R")
+source("/mnt/ifs/data/IPB/Projects/2017_005_MS-databases/mFam_code/Classifier_mFam/SubstanceClassClassifier.R")
+source("/mnt/ifs/data/IPB/Projects/2017_005_MS-databases/mFam_code/Classifier_mFam/SubstanceClassClassifier_classifier.R")
 ```
 
 ```
