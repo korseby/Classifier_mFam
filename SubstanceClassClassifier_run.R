@@ -1,64 +1,4 @@
 
-# Script for the compilation of classifiers translating MS/MS spectrum information to metabolit family information
-
-## Install
-
-Install dependencies.
-```
-## matrix
-install.packages("SparseM")
-install.packages("slam")
-
-## ??
-install.packages("plotrix")
-BiocManager::install("Biobase")
-install.packages("MASS")
-library("RMassBank")
-
-## util
-install.packages("stringr")
-install.packages("stringi")
-install.packages("ROCR")
-install.packages("PRROC")
-
-## classifier
-install.packages("klaR")
-install.packages("e1071")
-install.packages("kohonen")
-install.packages("nnet")
-install.packages("rda")
-install.packages("caret")
-install.packages("caretEnsemble")
-
-## MetFamily project parsing
-install.packages("squash")
-```
-
-
-
-## Run classifier
-
-<!-- Download MetFamily source. -->
-<!--`git clone  https://github.com/ipb-halle/MetFamily.git` -->
-
-Source the MetFamily source.
-```
-library("RCurl")
-eval(parse(text = getURL("https://github.com/ipb-halle/MetFamily/blob/master/R/FragmentMatrixFunctions.R", ssl.verifypeer = FALSE)))
-eval(parse(text = getURL("https://github.com/ipb-halle/MetFamily/blob/master/R/Annotation.R", ssl.verifypeer = FALSE)))
-eval(parse(text = getURL("https://github.com/ipb-halle/MetFamily/blob/master/R/DataProcessing.R", ssl.verifypeer = FALSE)))
-#source("/home/htreutle/Code/Java/MetFamily/R/FragmentMatrixFunctions.R")
-#source("/home/htreutle/Code/Java/MetFamily/R/Annotation.R")
-#source("/home/htreutle/Code/Java/MetFamily/R/DataProcessing.R")
-```
-
-Source the classifier source files.
-```
-source("/mnt/ifs/data/IPB/Projects/2017_005_MS-databases/mFam contributions/mFam Aggregation/Classifier_mFam/SubstanceClassClassifier.R")
-source("/mnt/ifs/data/IPB/Projects/2017_005_MS-databases/mFam contributions/mFam Aggregation/Classifier_mFam/SubstanceClassClassifier_classifier.R")
-```
-
-```
 ##############################################################################
 ## general parameters
 
@@ -206,5 +146,3 @@ parameterSetAll <- list(
 )
 
 runTest(parameterSetAll = parameterSetAll)
-```
-
